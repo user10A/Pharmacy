@@ -10,7 +10,8 @@ import pharmacy.model.Worker;
 
 import java.util.List;
 
-@RepositoryRestResource(path = "workers")
+//@RepositoryRestResource(path = "workers")
+@Repository
 public interface WorkerRepo extends JpaRepository<Worker,Long> {
     @Query("Select m from Worker m order by m.salary asc ")
     List<Worker> getAllSalaryBySortAsc();

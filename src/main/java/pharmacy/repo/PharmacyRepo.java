@@ -10,7 +10,8 @@ import pharmacy.model.Pharmacy;
 
 import java.util.List;
 
-@RepositoryRestResource(path = "pharmacies")
+//@RepositoryRestResource(path = "pharmacies")
+@Repository
 public interface PharmacyRepo extends JpaRepository<Pharmacy,Long> {
     @Query("select p.medicines from Pharmacy p where p.id=:pharmacyId")
     List<Medicines> getAllMedicinesByPharmacyId(@Param("pharmacyId") long pharmacyId);

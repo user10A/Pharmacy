@@ -8,7 +8,8 @@ import pharmacy.model.Medicines;
 
 import java.util.List;
 
-@RepositoryRestResource(path = "medicines")
+//@RepositoryRestResource(path = "medicines")
+@Repository
 public interface MedicinesRepo extends JpaRepository<Medicines,Long> {
 @Query("Select m from Medicines m order by m.price asc ")
     List<Medicines>getAllPriceBySortAsc();
