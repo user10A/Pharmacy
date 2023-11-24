@@ -14,7 +14,7 @@ public interface MedicinesRepo extends JpaRepository<Medicines,Long> {
 @Query("Select m from Medicines m order by m.price asc ")
     List<Medicines>getAllPriceBySortAsc();
 @Query("Select m from Medicines m order by m.price desc ")
-    List<Medicines>getAllPriceBySortDesc();
+    List<Medicines>getAllPriceBySortDesc() ;
 
 
 }
